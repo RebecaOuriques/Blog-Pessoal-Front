@@ -1,0 +1,19 @@
+//import React from 'react'
+import { useNavigate, Link } from 'react-router-dom'
+
+const Login = () => {
+    let navigate = useNavigate()
+    return (
+        <div>
+            <h2 className='text-slate-900 text-5xl  m-4'>Login</h2>
+            <div>
+                <button type='submit' onClick={() => {navigate('/home')}} className='hoover:underline mx-4'>
+                    Login userNavigate
+                </button>
+                <Link to='/home' className='hoover:underline mx-4'>Login por Link</Link>
+            </div>
+        </div>
+    )
+}
+
+export default Login
