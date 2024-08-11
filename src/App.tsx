@@ -1,35 +1,35 @@
-//import Flex from './components/Flex/Flex'
-//import Grid from './components/Grid/Grid'
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import Login from './pages/Login/Login'
-import Home from './pages/home/Home'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React from 'react';
+import './App.css';
 
-// Elemento JSX/TSX => Função que retorna HTML
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/login/Login';
+import Cadastro from './pages/cadastro/Cadastro';
+import Home from './pages/home/Home';
+import { AuthProvider } from './contexts/AuthContext';
+import ListaTemas from './components/temas/listaTemas/ListaTemas';
+
 
 function App() {
-
   return (
     <>
-
-      <BrowserRouter>
-        <Navbar />
-        <div className='min-h-[80vh]'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/login' element={<Login />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-
-
+    <AuthProvider>
+        <BrowserRouter>
+          <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/temas" element={<ListaTemas />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+        </AuthProvider>
     </>
-  )
+  );
 }
-
-
-
-export default App
+export default App;
