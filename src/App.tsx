@@ -1,11 +1,10 @@
-import React from 'react';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/navbar.tsx';
+import Footer from './components/footer/footer.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './pages/login/Login';
+import Login from './pages/login/login.tsx';
 import Cadastro from './pages/cadastro/Cadastro';
 import Home from './pages/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
@@ -17,6 +16,7 @@ import FormularioPostagem from './components/postagens/formularioPostagem/Formul
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import Perfil from './pages/perfil/perfil';
 import { ToastContainer } from 'react-toastify';
+
 
 
 function App() {
