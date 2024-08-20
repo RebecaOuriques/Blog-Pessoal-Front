@@ -1,5 +1,3 @@
-//import React from 'react'
-
 function Flex(){
     return (
         <div className='border-4 border-[#14a3dc] 
