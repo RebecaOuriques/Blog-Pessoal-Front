@@ -1,10 +1,10 @@
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Navbar from './components/navbar/navbar.tsx';
-import Footer from './components/footer/footer.tsx';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './pages/login/login.tsx';
+import Login from './pages/login/login';
 import Cadastro from './pages/cadastro/Cadastro';
 import Home from './pages/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
